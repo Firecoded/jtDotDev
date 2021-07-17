@@ -1,0 +1,64 @@
+.app {
+    height: 100vh;
+    background-color: black;
+    color: white;
+}
+
+.main-header {
+    font-size: 60px;
+    font-weight: bold;
+    padding: 10vmin;
+    text-rendering: optimizeLegibility;
+}
+
+.main-nav {
+    bottom: 0;
+    font-size: 22px;
+    padding-left: 10vmin;
+    padding-bottom: 10vmin;
+}
+
+.connect-links i {
+    color: white;
+    font-size: 48px;
+    a {
+        width: fit-content;
+    }
+}
+
+.highlight-text {
+    color: $highlight-red;
+}
+
+.highlight-bg {
+    background-color: $highlight-red;
+}
+
+.connect-menu {
+    height: 0;
+    width: 0;
+    left: 100%;
+    transition: all 200ms linear;
+    a {
+        opacity: 0;
+    }
+    &.active {
+        background-color: $highlight-red;
+        height: 50px;
+        width: 200px;
+        left: 100%;
+        // transform: translate(0%, -120%) scale(1);
+        a {
+            -moz-animation: appear 1s 1;
+            -o-animation: appear 1s 1;
+            animation: appear 1s 1;
+            opacity: 1;
+        }
+    }
+}
+
+.connect-container {
+    z-index: 5;
+    transition: all 200ms linear;
+    height: 50px;
+}

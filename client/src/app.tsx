@@ -1,5 +1,5 @@
 import React from "react";
-import "./app.scss";
+import "./styles/styles.scss";
 import { Footer } from "./components/footer";
 import { Header } from "./components/header";
 
