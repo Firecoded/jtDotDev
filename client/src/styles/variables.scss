@@ -24,3 +24,9 @@ $blueGray: #e9e5f0;
     -o-animation: appear 0.5s 1;
     animation: appear 0.5s 1;
 }
+
+@mixin anim-appear-smooth-1s {
+    -moz-animation: appear-smooth 1s 1;
+    -o-animation: appear-smooth 1s 1;
+    animation: appear-smooth 1s 1;
+}

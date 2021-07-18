@@ -27,7 +27,7 @@ export const Connect = () => {
     return (
         <div
             className={`d-flex align-items-center justify-content-center connect-container highlight-bg cursor-pointer position-relative ${
-                connectIsHovered || connectIsClicked ? "rounded-left active" : ""
+                connectIsHovered || connectIsClicked ? "active" : ""
             }`}
             onMouseEnter={() => setConnectIsHovered(true)}
             onMouseLeave={() => setConnectIsHovered(false)}

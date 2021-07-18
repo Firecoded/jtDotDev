@@ -2,7 +2,7 @@
     0% {
         opacity: 0;
     }
-    75% {
+    65% {
         opacity: 0;
     }
     100% {
@@ -14,7 +14,7 @@
     0% {
         opacity: 0;
     }
-    75% {
+    65% {
         opacity: 0;
     }
     100% {
@@ -26,7 +26,7 @@
     0% {
         opacity: 0;
     }
-    75% {
+    65% {
         opacity: 0;
     }
     100% {
@@ -38,7 +38,43 @@
     0% {
         opacity: 0;
     }
-    75% {
+    65% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes appear-smooth {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@-moz-keyframes appear-smooth {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@-o-keyframes appear-smooth {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes appear-smooth {
+    0% {
         opacity: 0;
     }
     100% {

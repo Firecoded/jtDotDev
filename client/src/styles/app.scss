@@ -55,7 +55,7 @@
         left: 100%;
         @include highlight-shadow;
         a {
-            @include anim-appear-1s;
+            @include anim-appear-smooth-1s;
             opacity: 1;
         }
     }
