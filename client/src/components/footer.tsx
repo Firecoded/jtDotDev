@@ -1,59 +1,44 @@
-import React, { useState } from "react";
+import React, { Fragment, useState } from "react";
+import { Connect } from "./connect";
+import { Projects } from "./projects";
 
 export const Footer = (): JSX.Element => {
-    const [connectIsHovered, setConnectIsHovered] = useState(false);
-    const [connectIsClicked, setConnectIsClicked] = useState(false);
-    const [projectsIsHovered, setProjectsIsHovered] = useState(false);
     const [projectsIsClicked, setProjectsIsClicked] = useState(false);
 
-    const buildConnectMenu = () => {
-        if (connectIsHovered || connectIsClicked) {
+    const buildProjectsMenu = () => {
+        if (projectsIsClicked) {
             return (
-                <div className="position-absolute connect-menu active rounded-right">
-                    <div className="d-flex justify-content-around align-items-center connect-links">
-                        <a href="https://www.linkedin.com/in/jacobcodes/" target="_blank" rel="noreferrer">
-                            <i className="fab fa-linkedin"></i>
-                        </a>
-                        <a href="https://github.com/Firecoded" target="_blank" rel="noreferrer">
-                            <i className="fab fa-github-square"></i>
-                        </a>
-                        <a href="mailto:contactjacobtay@gmail.com">
-                            <i className="fas fa-envelope-square"></i>
-                        </a>
+                <div className="position-absolute projects-menu active rounded-right d-flex justify-content-center align-items-center">
+                    <div className="projects-content-container position-relative h-100 w-100">
+                        <button
+                            type="button"
+                            className="close position-absolute"
+                            aria-label="Close"
+                            onClick={() => setProjectsIsClicked(false)}
+                        >
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        <Projects />
                     </div>
                 </div>
             );
         }
-        return <div className="position-absolute connect-menu"></div>;
+        return <div className="position-absolute projects-menu  rounded-right"></div>;
     };
+
     return (
-        <footer className="main-nav d-flex flex-column position-absolute">
-            <div
-                className=" d-flex align-items-center projects-container highlight-bg cursor-pointer mb-5"
-                onMouseEnter={() => setProjectsIsHovered(true)}
-                onMouseLeave={() => setProjectsIsHovered(false)}
-                onClick={() => setProjectsIsClicked(!projectsIsClicked)}
-            >
-                <span className="px-4 py-2">Projects</span>
-            </div>
-            <div
-                className={`d-flex align-items-center justify-content-center connect-container highlight-bg cursor-pointer position-relative ${
-                    connectIsHovered || connectIsClicked ? "rounded-left" : ""
-                }`}
-                onMouseEnter={() => setConnectIsHovered(true)}
-                onMouseLeave={() => setConnectIsHovered(false)}
-                onClick={() => {
-                    if (connectIsClicked) {
-                        setConnectIsClicked(false);
-                        setConnectIsHovered(false);
-                    } else {
-                        setConnectIsClicked(true);
-                    }
-                }}
-            >
-                {buildConnectMenu()}
-                <span className="">Connect</span>
-            </div>
-        </footer>
+        <Fragment>
+            {buildProjectsMenu()}
+            <footer className="main-nav d-flex flex-column position-absolute">
+                <div
+                    className=" d-flex align-items-center justify-content-center projects-container highlight-bg cursor-pointer"
+                    onClick={() => setProjectsIsClicked(!projectsIsClicked)}
+                >
+                    <span className="px-4 py-2">{`${projectsIsClicked ? "Close" : "Projects"}`}</span>
+                </div>
+                <div className="highlight-border-left"></div>
+                <Connect />
+            </footer>
+        </Fragment>
     );
 };

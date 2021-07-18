@@ -1,1 +1,26 @@
 $highlight-red: rgb(255, 56, 89);
+$black: #0e0e0e;
+$lightGray: #f2f0f7;
+$blueGray: #e9e5f0;
+
+@mixin highlight-shadow {
+    box-shadow: 0 0 17px #ff3859;
+}
+
+@mixin lightgray-shadow {
+    box-shadow: 0 0 17px #f2f0f7;
+}
+
+@mixin t-all-200 {
+    transition: all 200ms linear;
+}
+
+@mixin t-all-300 {
+    transition: all 400ms linear;
+}
+
+@mixin anim-appear-1s {
+    -moz-animation: appear 1s 1;
+    -o-animation: appear 1s 1;
+    animation: appear 1s 1;
+}

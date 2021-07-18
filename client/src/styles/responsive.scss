@@ -1,0 +1,45 @@
+@media (max-width: 576px) {
+}
+
+// Medium devices (tablets, 768px and up)
+@media (max-width: 768px) {
+    .main-header {
+        font-size: 42px;
+    }
+
+    .highlight-border-left {
+        height: 1.5rem;
+    }
+
+    .projects-menu {
+        bottom: calc(6vmin + 50px + 1.5rem);
+
+        left: 0;
+        z-index: 6;
+        &.active {
+            height: calc(100% - 12vmin - 50px - 1.5rem);
+            width: 100%;
+        }
+    }
+    .projects-menu .projects-content-container .close {
+        transform: initial;
+    }
+
+    .carousel-item {
+        .card {
+            border: none;
+        }
+    }
+}
+
+// Large devices (desktops, 992px and up)
+@media (max-width: 992px) {
+}
+
+// X-Large devices (large desktops, 1200px and up)
+@media (max-width: 1200px) {
+}
+
+// XX-Large devices (larger desktops, 1400px and up)
+@media (max-width: 1400px) {
+}

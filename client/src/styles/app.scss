@@ -1,21 +1,22 @@
 .app {
     height: 100vh;
-    background-color: black;
+    background-color: $black;
     color: white;
+    overflow: hidden;
 }
 
 .main-header {
     font-size: 60px;
     font-weight: bold;
-    padding: 10vmin;
+    padding: 8vmin;
     text-rendering: optimizeLegibility;
 }
 
 .main-nav {
     bottom: 0;
     font-size: 22px;
-    padding-left: 10vmin;
-    padding-bottom: 10vmin;
+    padding-left: 6vmin;
+    padding-bottom: 6vmin;
 }
 
 .connect-links i {
@@ -34,11 +35,16 @@
     background-color: $highlight-red;
 }
 
+.highlight-border-left {
+    border-left: 1px solid $highlight-red;
+    height: 3rem;
+}
+
 .connect-menu {
     height: 0;
     width: 0;
     left: 100%;
-    transition: all 200ms linear;
+    @include t-all-200;
     a {
         opacity: 0;
     }
@@ -47,18 +53,70 @@
         height: 50px;
         width: 200px;
         left: 100%;
-        // transform: translate(0%, -120%) scale(1);
+        @include highlight-shadow;
         a {
-            -moz-animation: appear 1s 1;
-            -o-animation: appear 1s 1;
-            animation: appear 1s 1;
+            @include anim-appear-1s;
             opacity: 1;
         }
     }
 }
 
-.connect-container {
+.connect-container,
+.projects-container {
     z-index: 5;
-    transition: all 200ms linear;
+    @include t-all-200;
     height: 50px;
+    width: 140px;
+}
+.connect-container.active {
+    @include highlight-shadow;
+}
+
+.projects-menu {
+    height: 0;
+    width: 0;
+    @include t-all-300;
+    bottom: calc(6vmin + 50px + 3rem);
+    left: 6vmin;
+    background-color: $black;
+    border: 1px solid $highlight-red;
+    @include highlight-shadow;
+    height: calc(100% - 12vmin - 50px - 3rem);
+    .projects-content-container {
+        opacity: 0;
+        .close {
+            color: white;
+            z-index: 5;
+            transform: translate(calc(50% + 1px), calc(-50% - 1px));
+            top: 0;
+            right: 0;
+            opacity: 1;
+            filter: drop-shadow(0px 0px 3px $black);
+            span {
+                font-size: 65px;
+            }
+        }
+    }
+    &.active {
+        width: calc(100% - 12vmin);
+        border: 2px solid $highlight-red;
+        .projects-content-container {
+            @include anim-appear-1s;
+            opacity: 1;
+        }
+    }
+}
+
+.carousel-item {
+    color: $black;
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+    .card {
+        max-width: 800px;
+        background-color: $black;
+        color: white;
+        border: 1px solid $lightGray;
+    }
 }
