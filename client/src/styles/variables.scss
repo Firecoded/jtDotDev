@@ -20,7 +20,7 @@ $blueGray: #e9e5f0;
 }
 
 @mixin anim-appear-1s {
-    -moz-animation: appear 1s 1;
-    -o-animation: appear 1s 1;
-    animation: appear 1s 1;
+    -moz-animation: appear 0.5s 1;
+    -o-animation: appear 0.5s 1;
+    animation: appear 0.5s 1;
 }

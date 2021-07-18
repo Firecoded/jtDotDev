@@ -36,7 +36,7 @@
 }
 
 .highlight-border-left {
-    border-left: 1px solid $highlight-red;
+    border-left: 2px solid $highlight-red;
     height: 3rem;
 }
 
@@ -79,7 +79,7 @@
     bottom: calc(6vmin + 50px + 3rem);
     left: 6vmin;
     background-color: $black;
-    border: 1px solid $highlight-red;
+    border-left: 2px solid $highlight-red;
     @include highlight-shadow;
     height: calc(100% - 12vmin - 50px - 3rem);
     .projects-content-container {
@@ -99,7 +99,7 @@
     }
     &.active {
         width: calc(100% - 12vmin);
-        border: 2px solid $highlight-red;
+        // border: 2px solid $highlight-red;
         .projects-content-container {
             @include anim-appear-1s;
             opacity: 1;
