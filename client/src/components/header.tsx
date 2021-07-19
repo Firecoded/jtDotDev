@@ -10,7 +10,7 @@ export const Header = (): JSX.Element => {
                 Full Stack<span className="highlight-text">,</span>
             </span>
             <span>
-                UI<span className="highlight-text">/</span> UX Focused<span className="highlight-text">,</span>
+                UI<span className="highlight-text">/</span> UX Advocate<span className="highlight-text">,</span>
             </span>
             <span>
                 Software Engineer<span className="highlight-text">.</span>

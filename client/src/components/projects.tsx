@@ -50,27 +50,30 @@ export const Projects = (): JSX.Element => {
     };
     return (
         <div id="carouselIndicators" className="carousel slide position-relative h-100 w-100" data-ride="carousel">
-            <ol className="carousel-indicators">
-                {carouselData.map((c, i) => {
-                    return (
-                        <li
-                            key={i}
-                            data-target="#carouselIndicators"
-                            data-slide-to={i}
-                            className={`${i === 0 ? "active" : ""}`}
-                        ></li>
-                    );
-                })}
-            </ol>
+            <div className="d-flex w-50 justify-content-center">
+                <ol className="carousel-indicators">
+                    {carouselData.map((c, i) => {
+                        return (
+                            <li
+                                key={i}
+                                data-target="#carouselIndicators"
+                                data-slide-to={i}
+                                className={`${i === 0 ? "active" : ""}`}
+                            ></li>
+                        );
+                    })}
+                    <a className="carousel-control-prev" href="#carouselIndicators" role="button" data-slide="prev">
+                        <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span className="sr-only">Previous</span>
+                    </a>
+                    <a className="carousel-control-next" href="#carouselIndicators" role="button" data-slide="next">
+                        <span className="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span className="sr-only">Next</span>
+                    </a>
+                </ol>
+            </div>
+
             <div className="carousel-inner h-100">{buildCarouselItems()}</div>
-            <a className="carousel-control-prev" href="#carouselIndicators" role="button" data-slide="prev">
-                <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span className="sr-only">Previous</span>
-            </a>
-            <a className="carousel-control-next" href="#carouselIndicators" role="button" data-slide="next">
-                <span className="carousel-control-next-icon" aria-hidden="true"></span>
-                <span className="sr-only">Next</span>
-            </a>
         </div>
     );
 };

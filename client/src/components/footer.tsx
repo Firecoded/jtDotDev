@@ -29,7 +29,7 @@ export const Footer = (): JSX.Element => {
     return (
         <Fragment>
             {buildProjectsMenu()}
-            <footer className="main-nav d-flex flex-column position-absolute">
+            <footer className="main-nav d-flex flex-column">
                 <div
                     className=" d-flex align-items-center justify-content-center projects-container highlight-bg cursor-pointer"
                     onClick={() => setProjectsIsClicked(!projectsIsClicked)}

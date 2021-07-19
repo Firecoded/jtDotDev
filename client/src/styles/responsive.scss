@@ -9,11 +9,15 @@
 
     .highlight-border-left {
         height: 1.5rem;
+
+        border-left: none;
     }
 
     .projects-menu {
-        bottom: calc(6vmin + 50px + 1.5rem);
+        bottom: calc(12vmin + 50px + 1.5rem);
 
+        box-shadow: none;
+        border-left: none;
         left: 0;
         z-index: 6;
         &.active {
@@ -29,6 +33,10 @@
         .card {
             border: none;
         }
+    }
+    .main-nav {
+        padding-bottom: 12vmin;
+        position: relative;
     }
 }
 
