@@ -1,11 +1,13 @@
 @-webkit-keyframes appear {
     0% {
         opacity: 0;
+        background-color: $black;
     }
-    65% {
+    60% {
         opacity: 0;
     }
     100% {
+        background-color: #161616;
         opacity: 1;
     }
 }
@@ -13,11 +15,13 @@
 @-moz-keyframes appear {
     0% {
         opacity: 0;
+        background-color: $black;
     }
-    65% {
+    60% {
         opacity: 0;
     }
     100% {
+        background-color: #161616;
         opacity: 1;
     }
 }
@@ -25,11 +29,13 @@
 @-o-keyframes appear {
     0% {
         opacity: 0;
+        background-color: $black;
     }
-    65% {
+    60% {
         opacity: 0;
     }
     100% {
+        background-color: #161616;
         opacity: 1;
     }
 }
@@ -37,11 +43,13 @@
 @keyframes appear {
     0% {
         opacity: 0;
+        background-color: $black;
     }
-    65% {
+    60% {
         opacity: 0;
     }
     100% {
+        background-color: #161616;
         opacity: 1;
     }
 }

@@ -1,4 +1,31 @@
-@media (max-width: 576px) {
+// XX-Large devices (larger desktops, 1400px and up)
+@media (max-width: 1400px) {
+}
+
+// X-Large devices (large desktops, 1200px and up)
+@media (max-width: 1200px) {
+    .main-header {
+        width: 100%;
+    }
+
+    .projects-menu {
+        left: 6vmin;
+    }
+    .main-nav {
+        left: 0;
+    }
+    .projects-menu {
+        &.active {
+            width: calc(100% - 12vmin);
+        }
+    }
+    .larger-text {
+        font-size: 100px;
+    }
+}
+
+// Large devices (desktops, 992px and up)
+@media (max-width: 992px) {
 }
 
 // Medium devices (tablets, 768px and up)
@@ -9,11 +36,15 @@
 
     .highlight-border-left {
         height: 1.5rem;
+
+        border-left: none;
     }
 
     .projects-menu {
-        bottom: calc(6vmin + 50px + 1.5rem);
+        bottom: calc(12vmin + 50px + 1.5rem);
 
+        box-shadow: none;
+        border-left: none;
         left: 0;
         z-index: 6;
         &.active {
@@ -30,16 +61,22 @@
             border: none;
         }
     }
+    .main-nav {
+        padding-bottom: 12vmin;
+        position: relative;
+    }
+
+    .larger-text {
+        font-size: 70px;
+    }
+    .card {
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
 }
 
-// Large devices (desktops, 992px and up)
-@media (max-width: 992px) {
-}
-
-// X-Large devices (large desktops, 1200px and up)
-@media (max-width: 1200px) {
-}
-
-// XX-Large devices (larger desktops, 1400px and up)
-@media (max-width: 1400px) {
+@media (max-width: 576px) {
+    .larger-text {
+        font-size: 70px;
+    }
 }
