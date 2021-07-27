@@ -10,6 +10,11 @@
     font-weight: bold;
     padding: 8vmin;
     text-rendering: optimizeLegibility;
+    width: 80%;
+    margin: 0 auto;
+}
+.larger-text {
+    font-size: 120px;
 }
 
 .main-nav {
@@ -17,7 +22,7 @@
     font-size: 22px;
     padding-left: 6vmin;
     padding-bottom: 6vmin;
-    position: relative;
+    left: calc(10%);
 }
 
 .connect-links i {
@@ -78,13 +83,15 @@
     width: 0;
     @include t-all-250;
     bottom: calc(6vmin + 50px + 3rem);
-    left: 6vmin;
+    left: calc(6vmin + 10%);
     background-color: $black;
     border-left: 2px solid $highlight-red;
-    @include highlight-shadow;
+    border-top: 1px solid $highlight-red;
+    border-bottom: 1px solid $highlight-red;
     height: calc(100% - 12vmin - 50px - 3rem);
     .projects-content-container {
         opacity: 0;
+        border-right: none;
         .close {
             color: white;
             z-index: 5;
@@ -99,11 +106,16 @@
         }
     }
     &.active {
-        width: calc(100% - 12vmin);
-        // border: 2px solid $highlight-red;
+        width: calc(100% - 12vmin - 20%);
+        border-left: 1px solid $highlight-red;
+        border-right: 1px solid $highlight-red;
         .projects-content-container {
             @include anim-appear-1s;
+
+            border-right: 1px solid $highlight-red;
+            background-color: #161616;
             opacity: 1;
+            transition: background-color 0.8s ease;
         }
     }
 }
@@ -115,9 +127,11 @@
         height: auto;
     }
     .card {
-        max-width: 800px;
+        max-width: 1200px;
         background-color: $black;
         color: white;
         border: 1px solid $lightGray;
+        margin-left: 5vmin;
+        margin-right: 5vmin;
     }
 }
