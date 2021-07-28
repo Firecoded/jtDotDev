@@ -9,20 +9,19 @@ export const Connect = () => {
             return (
                 <div className="position-absolute connect-menu active rounded-right">
                     <div className="d-flex justify-content-around align-items-center connect-links h-100">
-                        <a href="https://www.linkedin.com/in/jacobcodes/" target="_blank" rel="noreferrer" className="">
+                        <a href="https://www.linkedin.com/in/jacobcodes/" target="_blank" rel="noreferrer">
                             <i className="fab fa-linkedin"></i>
                         </a>
-                        <a href="https://github.com/Firecoded" target="_blank" rel="noreferrer" className="">
+                        <a href="https://github.com/Firecoded" target="_blank" rel="noreferrer">
                             <i className="fab fa-github-square"></i>
                         </a>
-                        <a href="mailto:contactjacobtay@gmail.com" className="">
+                        <a href="mailto:contactjacobtay@gmail.com">
                             <i className="fas fa-envelope-square"></i>
                         </a>
                         <a
                             href="https://drive.google.com/file/d/1ICDxBPl0VPGhQbfuT8IfCM01sZG1M7oB/view?usp=sharing"
                             target="_blank"
                             rel="noreferrer"
-                            className=""
                         >
                             <i className="fas fa-file"></i>
                         </a>
