@@ -1,5 +1,6 @@
 import msweep from "../assets/imgs/msweep-lg.png";
 import devhub from "../assets/imgs/devhub-lg.png";
+import concertFinder from "../assets/imgs/concert-finder-lg.png";
 
 export const Projects = (): JSX.Element => {
     const carouselData = [
@@ -12,6 +13,16 @@ export const Projects = (): JSX.Element => {
             techUsed: "ReactJS, Redux, SCSS, Node, Express, MongoDB, JWT",
             github: "https://github.com/Firecoded/dev_connect",
             liveDemo: "https://salty-caverns-71357.herokuapp.com/",
+        },
+        {
+            imgSrc: concertFinder,
+            imgAlt: "Concert finder app image",
+            cardTitle: "Concert Finder",
+            cardBody:
+                "Hackathon project built with jQuery that makes use of TicketMaster and Google APIs. Hackathons are great ways to learn valuable teamwork skills and learn to deliver solutions quickly under pressure.",
+            techUsed: "jQuery, JSDoc,  AJAX, MaterializeCSS, HTML, CSS",
+            github: "https://github.com/Firecoded/ConcertFinder",
+            liveDemo: "https://concert-finder.netlify.app",
         },
         {
             imgSrc: msweep,

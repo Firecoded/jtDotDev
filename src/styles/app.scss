@@ -27,9 +27,13 @@
 
 .connect-links i {
     color: white;
-    font-size: 48px;
+    font-size: 42px;
     a {
         width: fit-content;
+    }
+    &.fa-file {
+        font-size: 36.75px;
+        margin-top: 0.1rem;
     }
 }
 
