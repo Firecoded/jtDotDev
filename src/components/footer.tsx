@@ -33,6 +33,12 @@ export const Footer = (): JSX.Element => {
                 <div
                     className=" d-flex align-items-center justify-content-center projects-container highlight-bg cursor-pointer"
                     onClick={() => setProjectsIsClicked(!projectsIsClicked)}
+                    onKeyUp={(e) => {
+                        if (e.key === "Tab") return;
+                        setProjectsIsClicked(!projectsIsClicked);
+                    }}
+                    role="button"
+                    tabIndex={0}
                 >
                     <span className="px-4 py-2">{`${projectsIsClicked ? "Close" : "Projects"}`}</span>
                 </div>
