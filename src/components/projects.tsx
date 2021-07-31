@@ -80,6 +80,14 @@ export const Projects = (): JSX.Element => {
             data-ride="carousel"
             data-interval="false"
         >
+            <a className="carousel-control-prev" href="#carouselIndicators" role="button" data-slide="prev">
+                <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span className="sr-only">Previous</span>
+            </a>
+            <a className="carousel-control-next" href="#carouselIndicators" role="button" data-slide="next">
+                <span className="carousel-control-next-icon" aria-hidden="true"></span>
+                <span className="sr-only">Next</span>
+            </a>
             <div className="d-flex w-50 justify-content-center">
                 <ol className="carousel-indicators">
                     {carouselData.map((c, i) => {
@@ -92,14 +100,6 @@ export const Projects = (): JSX.Element => {
                             ></li>
                         );
                     })}
-                    <a className="carousel-control-prev" href="#carouselIndicators" role="button" data-slide="prev">
-                        <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span className="sr-only">Previous</span>
-                    </a>
-                    <a className="carousel-control-next" href="#carouselIndicators" role="button" data-slide="next">
-                        <span className="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span className="sr-only">Next</span>
-                    </a>
                 </ol>
             </div>
 
