@@ -3,7 +3,7 @@
 }
 
 // X-Large devices (large desktops, 1200px and up)
-@media (max-width: 1200px) {
+@media (max-width: 1200px), (max-height: 800px) {
     .main-header {
         width: 100%;
     }
@@ -29,26 +29,26 @@
 }
 
 // Medium devices (tablets, 768px and up)
-@media (max-width: 768px) {
+@media (max-width: 768px), (max-height: 710px) {
     .main-header {
         font-size: 42px;
     }
 
     .highlight-border-left {
-        height: 1.5rem;
+        height: 1rem;
 
         border-left: none;
     }
 
     .projects-menu {
-        bottom: calc(12vmin + 50px + 1.5rem);
+        bottom: calc(20px + 50px + 1rem);
 
         box-shadow: none;
         border-left: none;
         left: 0;
         z-index: 6;
         &.active {
-            height: calc(100% - 12vmin - 50px - 1.5rem);
+            height: calc(100% - 20px - 50px - 1rem);
             width: 100%;
         }
     }
@@ -62,7 +62,7 @@
         }
     }
     .main-nav {
-        padding-bottom: 12vmin;
+        padding-bottom: 20px;
         position: relative;
     }
 
@@ -72,11 +72,50 @@
     .card {
         margin-left: 1rem;
         margin-right: 1rem;
+        p {
+            margin-bottom: 0.5rem;
+        }
+        .card-links {
+            z-index: 16;
+        }
     }
 }
 
-@media (max-width: 576px) {
+@media (max-width: 576px), (max-height: 500px) {
+    .main-header {
+        font-size: 38px;
+    }
     .larger-text {
-        font-size: 70px;
+        font-size: 55px;
+    }
+    .main-nav {
+        span {
+            font-size: 18px;
+        }
+    }
+    .connect-container,
+    .projects-container {
+        height: 30px;
+        width: 140px;
+    }
+    .projects-menu {
+        bottom: calc(20px + 30px + 0.5rem);
+        &.active {
+            height: calc(100% - 20px - 30px - 0.5rem);
+            width: 100%;
+        }
+    }
+    .card-body {
+        font-size: 14px;
+        padding: 0.5rem;
+    }
+    .card-title {
+        margin-bottom: 0.25rem;
+        font-size: 1.2rem;
+    }
+    .highlight-border-left {
+        height: 0.5rem;
+
+        border-left: none;
     }
 }
