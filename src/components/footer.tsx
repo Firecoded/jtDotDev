@@ -1,6 +1,6 @@
 import React, { Fragment, useState } from "react";
 import { Connect } from "./connect";
-import { Projects } from "./projects";
+import { Carousel } from "./Carousel";
 
 export const Footer = (): JSX.Element => {
     const [projectsIsClicked, setProjectsIsClicked] = useState(false);
@@ -18,7 +18,7 @@ export const Footer = (): JSX.Element => {
                         >
                             <span aria-hidden="true">&times;</span>
                         </button>
-                        <Projects />
+                        <Carousel />
                     </div>
                 </div>
             );

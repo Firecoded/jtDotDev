@@ -2,7 +2,7 @@ import msweep from "../assets/imgs/msweep-lg.png";
 import devhub from "../assets/imgs/devhub-lg.png";
 import concertFinder from "../assets/imgs/concert-finder-lg.png";
 
-export const Projects = (): JSX.Element => {
+export const Carousel = (): JSX.Element => {
     const carouselData = [
         {
             imgSrc: devhub,
@@ -74,22 +74,10 @@ export const Projects = (): JSX.Element => {
         });
     };
     return (
-        <div
-            id="carouselIndicators"
-            className="carousel slide position-relative h-100 w-100"
-            data-ride="carousel"
-            data-interval="false"
-        >
-            <a className="carousel-control-prev" href="#carouselIndicators" role="button" data-slide="prev">
-                <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span className="sr-only">Previous</span>
-            </a>
-            <a className="carousel-control-next" href="#carouselIndicators" role="button" data-slide="next">
-                <span className="carousel-control-next-icon" aria-hidden="true"></span>
-                <span className="sr-only">Next</span>
-            </a>
-            <div className="d-flex w-50 justify-content-center">
-                <ol className="carousel-indicators">
+        <div id="carouselIndicators" className="carousel slide" data-ride="carousel" data-interval="false">
+            <div className="carousel-inner">{buildCarouselItems()}</div>
+            <div className="d-flex justify-content-center" style={{ background: "gray" }}>
+                <ol className="carousel-indicators position-relative">
                     {carouselData.map((c, i) => {
                         return (
                             <li
@@ -101,9 +89,28 @@ export const Projects = (): JSX.Element => {
                         );
                     })}
                 </ol>
-            </div>
 
-            <div className="carousel-inner h-100">{buildCarouselItems()}</div>
+                <a
+                    className="carousel-control-prev"
+                    href="#carouselIndicators"
+                    role="button"
+                    data-slide="prev"
+                    style={{ background: "gray" }}
+                >
+                    <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span className="sr-only">Previous</span>
+                </a>
+                <a
+                    className="carousel-control-next"
+                    href="#carouselIndicators"
+                    role="button"
+                    data-slide="next"
+                    style={{ background: "gray" }}
+                >
+                    <span className="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span className="sr-only">Next</span>
+                </a>
+            </div>
         </div>
     );
 };
