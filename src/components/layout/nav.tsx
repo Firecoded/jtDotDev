@@ -5,20 +5,34 @@ export const Nav = withRouter((routerProps: RouterProps) => {
     return (
         <nav id="nav">
             <Link to="/" className={`icon solid fa-home inactive ${pathname === "/" ? "active" : "is-preload"}`}>
-                <span>Home</span>
+                <span className="hover-span">Home</span>
             </Link>
             <Link
-                to="/projects"
-                className={`icon solid fa-folder inactive ${pathname === "/projects" ? "active" : "is-preload"}`}
+                to="/code"
+                className={`icon solid fa-code inactive ${pathname === "/code" ? "active" : "is-preload"}`}
             >
-                <span>Projects</span>
+                <span className="hover-span">Code</span>
             </Link>
             <Link
-                to="/contact"
-                className={`icon solid fa-envelope inactive ${pathname === "/contact" ? "active" : "is-preload"}`}
+                to="/video"
+                className={`icon solid fa-film inactive ${pathname === "/video" ? "active" : "is-preload"}`}
             >
-                <span>Contact</span>
+                <span className="hover-span">Video</span>
             </Link>
+            <Link
+                to="/audio"
+                className={`icon solid fa-headphones-alt inactive ${pathname === "/audio" ? "active" : "is-preload"}`}
+            >
+                <span className="hover-span">Audio</span>
+            </Link>
+            <a
+                href="https://drive.google.com/file/d/1ICDxBPl0VPGhQbfuT8IfCM01sZG1M7oB/view?usp=sharing"
+                target="_blank"
+                rel="noreferrer"
+                className="icon solid fa fa-user-astronaut inactive"
+            >
+                <span className="hover-span">Resume</span>
+            </a>
         </nav>
     );
 });

@@ -1,22 +1,37 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
+import me from "../../assets/imgs/266bbd50_o.jpeg";
 
 export const Landing = () => {
     const [className, setClassName] = useState("panel intro active inactive");
+    const [email, setEmail] = useState("");
     useEffect(() => {
         setTimeout(() => setClassName("panel intro active"), 250);
+        setTimeout(() => setEmail("contactjacobtay@gmail.com"), 1000);
     }, []);
     return (
         <article id="home" className={className}>
             <header>
-                <h1>Jane Doe</h1>
-                <p>Senior Astral Projectionist</p>
+                <h1>Jacob Taylor</h1>
+                <p>Full Stack, UI/UX Advocate, Software Engineer</p>
+                <div className="connect-links w-100 mt-4">
+                    <a href="https://www.linkedin.com/in/jacobcodes/" target="_blank" rel="noreferrer" className="pr-3">
+                        <i className="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="https://github.com/Firecoded" target="_blank" rel="noreferrer" className="pr-3">
+                        <i className="fab fa-github"></i>
+                    </a>
+                    <a href={`mailto:${email}`}>
+                        <i className="fas fa-envelope-square"></i>
+                    </a>
+                </div>
             </header>
-            <a href="#work" className="jumplink pic">
+            <Link to="/code" className="jumplink pic">
                 <span className="arrow icon solid fa-chevron-right">
                     <span>See my work</span>
                 </span>
-                <img src="images/me.jpg" alt="" />
-            </a>
+                <img src={me} alt="Jacob Taylor, desert background" />
+            </Link>
         </article>
     );
 };

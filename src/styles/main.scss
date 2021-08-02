@@ -231,7 +231,7 @@ html {
 }
 
 body {
-    background-image: url("images/overlay.png"), url("images/bg.jpg");
+    background-image: url("images/overlay.png"), url("images/bg3.jpg");
     background-repeat: repeat, no-repeat;
     background-size: auto, 100% 100%;
     background-attachment: fixed;
@@ -251,7 +251,8 @@ body {
 body,
 input,
 textarea,
-select {
+select,
+.hover-span {
     font-family: "Source Sans Pro", sans-serif;
     font-weight: 300;
     color: #777777;
@@ -624,12 +625,6 @@ ul.actions {
         }
     }
 
-    &.brands {
-        &:before {
-            font-family: "Font Awesome 5 Brands";
-        }
-    }
-
     &:before {
         line-height: inherit;
     }
@@ -695,6 +690,7 @@ ul.actions {
             // Labels not wide enough? Increase its width below and set margin-left to ((width / 2) * -1)
             width: 5.5em;
             margin-left: -2.75em;
+            font-weight: 900;
 
             &:after {
                 content: "";
@@ -969,6 +965,40 @@ ul.actions {
                 padding-left: 0.5em;
                 margin-left: 0.5em;
             }
+        }
+    }
+}
+
+/* Connect Icons */
+
+.connect-links {
+    i {
+        padding: 0.4rem;
+        font-size: 30px;
+        // width: 70px;
+        border-radius: 10%;
+        // text-decoration: none;
+        // margin: 5px 2px;
+    }
+    .fa-linkedin-in {
+        background-color: #007bb6;
+        color: white;
+        &:hover {
+            opacity: 0.8;
+        }
+    }
+    .fa-github {
+        background-color: black;
+        color: white;
+        &:hover {
+            opacity: 0.8;
+        }
+    }
+    .fa-envelope-square {
+        background-color: #808080;
+        color: white;
+        &:hover {
+            opacity: 0.8;
         }
     }
 }
