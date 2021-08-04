@@ -43,24 +43,24 @@ export const Projects = () => {
     const buildProjectCards = () => {
         return projectCards.map((c, i) => {
             return (
-                <div className="card mb-3" key={i}>
-                    <img src={c.imgSrc} className="card-img-top" alt={c.imgAlt} />
-                    <div className="card-body">
-                        <h4 className="card-title">
-                            <strong>{c.cardTitle}</strong>
-                        </h4>
-                        <p className="card-text mb-3">{c.cardBody}</p>
-                        <p className="card-text mb-3">
-                            <span className="">
-                                Tech Used: <strong>{c.techUsed}</strong>
-                            </span>
-                        </p>
-                        <a href={c.github} className="card-link mt-2" target="_blank" rel="noreferrer">
-                            GitHub Repo
-                        </a>
-                        <a href={c.liveDemo} className="card-link mt-2" target="_blank" rel="noreferrer">
-                            Live Demo
-                        </a>
+                <div className="col-sm-11 col-md-5 col-lg-4" key={i}>
+                    <div className="card mb-3 mr-1">
+                        <img src={c.imgSrc} className="card-img-top" alt={c.imgAlt} />
+                        <div className="card-body">
+                            <h3 className="card-title">
+                                <strong>{c.cardTitle}</strong>
+                            </h3>
+                            <p className="card-text mb-3">{c.cardBody}</p>
+                            <p className="card-text mb-3">
+                                <span className="">Tech Used: {c.techUsed}</span>
+                            </p>
+                            <a href={c.github} className="card-link mt-2" target="_blank" rel="noreferrer">
+                                GitHub Repo
+                            </a>
+                            <a href={c.liveDemo} className="card-link mt-2" target="_blank" rel="noreferrer">
+                                Live Demo
+                            </a>
+                        </div>
                     </div>
                 </div>
             );
@@ -72,7 +72,7 @@ export const Projects = () => {
                 <h2>Code Projects</h2>
             </header>
             <section>
-                <div className="card-columns">{buildProjectCards()}</div>
+                <div className="row">{buildProjectCards()}</div>
             </section>
         </article>
     );
