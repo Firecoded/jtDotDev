@@ -124,6 +124,7 @@ video {
     font-size: 100%;
     font: inherit;
     vertical-align: baseline;
+    font-weight: 400;
 }
 
 article,
@@ -359,6 +360,10 @@ table,
 blockquote,
 form {
     margin-bottom: 2em;
+}
+
+.cursor-pointer {
+    cursor: pointer;
 }
 
 /* Table */
@@ -995,4 +1000,11 @@ ul.actions {
             opacity: 0.8;
         }
     }
+}
+
+/* BS Overrides */
+
+.list-group-item.active {
+    background-color: #d88772;
+    border-color: #d88772;
 }

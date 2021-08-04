@@ -15,7 +15,7 @@ const App = (): JSX.Element => {
         <div id="wrapper">
             <Router>
                 <Nav />
-                <div id="main">
+                <div id="main" className="shadow">
                     <Switch>
                         <Route exact path="/" render={() => <Landing />} />
                         <Route path="/code" render={() => <Projects />} />

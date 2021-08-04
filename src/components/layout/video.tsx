@@ -11,7 +11,7 @@ export const Video = () => {
                 <h2>Video Projects</h2>
             </header>
             <h4>Up the Pacific Coast</h4>
-            <p className="mb-2">
+            <p className="mb-3">
                 Decided to take a backpacking road trip to explore the beautiful scenery from San Diego to Seattle.
                 Rented a car, booked a flight home and planned as little as possible in between.
             </p>
