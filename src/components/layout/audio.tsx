@@ -83,31 +83,34 @@ export const Audio = () => {
             <p className="mb-3">
                 In my free time I like to mess around with different sounds and loops on my Mac. I didn't know where to
                 share them until now. (If you think of good band names, send me a message &#128521;)
+                <br />
+                Genre: Cinematic, Electronic
             </p>
             <div className="row mb-2">
-                <div className="col-lg-5 col-md-6 col-sm-12 order-sm-last order-md-first">{buildSongList()}</div>
-                <div className="col-lg-7 col-md-6 col-sm-12">
+                <div className="col-lg-5 col-md-6 col-sm-12">{buildSongList()}</div>
+                <div className="col-lg-7 col-md-6 col-sm-12 order-first order-md-last">
                     <div className="image fit">
                         <img src={albumArt} alt="album cover art" />
                     </div>
                 </div>
             </div>
-            <AudioPlayer
-                autoPlay={false}
-                src={SONGS[activeSongIndex].src}
-                onClickNext={() => handleNextPrev(next)}
-                onClickPrevious={() => handleNextPrev(prev)}
-                showSkipControls={true}
-                onPlay={() => setIsPlaying(true)}
-                onPause={() => setIsPlaying(false)}
-                ref={playerRef}
-                autoPlayAfterSrcChange={true}
-                onEnded={() => handleNextPrev(next)}
-                customAdditionalControls={[]}
-
-                // layout="horizontal"
-                // other props here
-            />
+            <div className="row">
+                <div className="col">
+                    <AudioPlayer
+                        autoPlay={false}
+                        src={SONGS[activeSongIndex].src}
+                        onClickNext={() => handleNextPrev(next)}
+                        onClickPrevious={() => handleNextPrev(prev)}
+                        showSkipControls={true}
+                        onPlay={() => setIsPlaying(true)}
+                        onPause={() => setIsPlaying(false)}
+                        ref={playerRef}
+                        autoPlayAfterSrcChange={true}
+                        onEnded={() => handleNextPrev(next)}
+                        customAdditionalControls={[]}
+                    />
+                </div>
+            </div>
         </article>
     );
 };

@@ -26,7 +26,7 @@ export const Nav = withRouter((routerProps: RouterProps) => {
                 <span className="hover-span">Audio</span>
             </Link>
             <a
-                href="https://drive.google.com/file/d/1ICDxBPl0VPGhQbfuT8IfCM01sZG1M7oB/view?usp=sharing"
+                href="https://drive.google.com/file/d/1xXYtMqASoTwTPvSC_WqnfuC0lSJLqcQD/view?usp=sharing"
                 target="_blank"
                 rel="noreferrer"
                 className="icon solid fa fa-user-astronaut inactive"
