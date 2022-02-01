@@ -83,6 +83,8 @@ export const Audio = () => {
             <p className="mb-3">
                 In my free time I like to mess around with different sounds and loops on my Mac. I didn't know where to
                 share them until now. (If you think of good band names, send me a message &#128521;)
+                <br />
+                Genre: Cinematic, Electronic
             </p>
             <div className="row mb-2">
                 <div className="col-lg-5 col-md-6 col-sm-12">{buildSongList()}</div>
