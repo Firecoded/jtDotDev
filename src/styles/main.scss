@@ -141,8 +141,9 @@ section {
     display: block;
 }
 
-body {
-    line-height: 1;
+body,
+body p {
+    line-height: 1.5em !important;
 }
 
 ol,
@@ -228,7 +229,9 @@ html {
 body {
     background-image: url("images/overlay.png"), url("images/bg3.jpg");
     background-repeat: repeat, no-repeat;
-    background-size: auto, 100% 100%;
+    background-size:
+        auto,
+        100% 100%;
     background-attachment: fixed;
     overflow-y: scroll;
 
@@ -687,7 +690,7 @@ ul.actions {
             opacity: 0;
             @include vendor("transition", "opacity .25s ease-in-out");
             // Labels not wide enough? Increase its width below and set margin-left to ((width / 2) * -1)
-            width: 5.5em;
+            width: 5.8em;
             margin-left: -2.75em;
             font-weight: 900;
 

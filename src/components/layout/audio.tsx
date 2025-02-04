@@ -17,15 +17,14 @@ const SONGS = [
 ];
 
 export const Audio = () => {
-    const [className, setClassName] = useState("panel active inactive");
+    const [className, setClassName] = useState("panel active inactive pt-4");
+    useEffect(() => {
+        setTimeout(() => setClassName("panel active pt-4"), 250);
+    }, []);
     const [activeSongIndex, setActiveSongIndex] = useState(0);
     const [isPlaying, setIsPlaying] = useState(false);
 
     const playerRef = createRef<H5AudioPlayer>();
-
-    useEffect(() => {
-        setTimeout(() => setClassName("panel active"), 250);
-    }, []);
 
     const handleNextPrev = (newIndex: number): void => {
         if (newIndex >= SONGS.length) {
@@ -77,10 +76,10 @@ export const Audio = () => {
 
     return (
         <article id="contact" className={className}>
-            <header>
+            <header className="mb-3">
                 <h2>Audio Projects</h2>
             </header>
-            <p className="mb-3">
+            <p className="mb-3" style={{ fontSize: "22px" }}>
                 In my free time I like to mess around with different sounds and loops on my Mac. I didn't know where to
                 share them until now. (If you think of good band names, send me a message &#128521;)
                 <br />

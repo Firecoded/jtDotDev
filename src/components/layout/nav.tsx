@@ -1,7 +1,8 @@
-import { Link, RouterProps, withRouter } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
-export const Nav = withRouter((routerProps: RouterProps) => {
-    const { pathname } = routerProps.history.location;
+export const Nav = () => {
+    const location = useLocation();
+    const { pathname } = location;
     return (
         <nav id="nav">
             <Link to="/" className={`icon solid fa-home inactive ${pathname === "/" ? "active" : "is-preload"}`}>
@@ -15,9 +16,9 @@ export const Nav = withRouter((routerProps: RouterProps) => {
             </Link>
             <Link
                 to="/video"
-                className={`icon solid fa-film inactive ${pathname === "/video" ? "active" : "is-preload"}`}
+                className={`icon solid fa-photo-video inactive ${pathname === "/video" ? "active" : "is-preload"}`}
             >
-                <span className="hover-span">Video</span>
+                <span className="hover-span">Photo/Video</span>
             </Link>
             <Link
                 to="/audio"
@@ -35,4 +36,4 @@ export const Nav = withRouter((routerProps: RouterProps) => {
             </a>
         </nav>
     );
-});
+};
