@@ -27,7 +27,7 @@ export const Nav = () => {
                 <span className="hover-span">Audio</span>
             </Link>
             <a
-                href="https://drive.google.com/file/d/1xXYtMqASoTwTPvSC_WqnfuC0lSJLqcQD/view?usp=sharing"
+                href="https://drive.google.com/file/d/1YifHNneLYqMIPScmPTbDCeru0MxFPlUI/view?usp=sharing"
                 target="_blank"
                 rel="noreferrer"
                 className="icon solid fa fa-user-astronaut inactive"
