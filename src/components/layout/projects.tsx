@@ -40,12 +40,12 @@ export const Projects = () => {
             imgAlt: "Chrome extension preview",
             cardTitle: "Draggable Video Resizer",
             cardBody:
-                "Developed a Chrome extension that wraps video elements in a draggable container, preserving page flow with placeholders and ensuring non-intrusive resizing. Powered by the Chrome Scripting API and event-driven content scripts.",
+                "Chrome extension that wraps video elements in a draggable container, preserves page flow with placeholders and enables custom video resizing. Built with event-driven content scripts and opt-in DOM manipulation.",
             techUsed: "JavaScript, HTML, CSS, Chrome Extension APIs, Vite",
-            github: "https://github.com/Firecoded/draggable-video-resizer", // replace with actual
+            github: "https://github.com/Firecoded/draggable-video-resizer",
             liveDemo:
                 "https://chromewebstore.google.com/detail/draggable-video-resizer/elfibhkehlekegpggjaanbbjnnnnbdni?authuser=2&hl=en",
-            demoIsActive: true, // or true if published
+            demoIsActive: true,
         },
         {
             imgSrc: msweep,
