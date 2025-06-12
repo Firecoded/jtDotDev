@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import me from "../../assets/imgs/266bbd50_o.jpeg";
+import me from "../../assets/imgs/me.jpg";
 
 export const Landing = () => {
     const [className, setClassName] = useState("panel intro active inactive");
