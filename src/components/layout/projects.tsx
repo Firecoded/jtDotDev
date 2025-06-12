@@ -29,7 +29,7 @@ export const Projects = () => {
             imgAlt: "Photo gallery preview",
             cardTitle: "jacobshoots.pictures",
             cardBody:
-                "A minimalist gallery to share travel photography. I built it from scratch rather than using a pre-made service to keep full control over the design, performance and cost",
+                "A minimalist gallery to share travel photography. I built it from scratch rather than using a pre-made service to keep full control over the design, performance and cost.",
             techUsed: "ReactJS, Typescript, Bootstrap 5",
             github: "https://github.com/Firecoded/jtphotography",
             liveDemo: "https://jacobshoots.pictures",
