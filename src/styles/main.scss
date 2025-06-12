@@ -1011,3 +1011,23 @@ ul.actions {
     background-color: #d88772;
     border-color: #d88772;
 }
+
+.btn-outline-indigo {
+    border-color: #6610f2;
+    color: #6610f2;
+
+    &:hover {
+        background-color: #6610f2;
+        color: white;
+    }
+}
+
+.btn-ocean {
+    background-color: #2a72b2;
+    color: white;
+
+    &:hover {
+        background-color: #215d91;
+        color: white;
+    }
+}
