@@ -30,7 +30,7 @@ export const Landing = () => {
                 <span className="arrow icon solid fa-chevron-right">
                     <span>See my work</span>
                 </span>
-                <img src={me} alt="Jacob Taylor, desert background" />
+                <img src={me} alt="Jacob Taylor, Vietnam background" />
             </Link>
         </article>
     );
