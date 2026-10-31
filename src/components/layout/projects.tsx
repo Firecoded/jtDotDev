@@ -1,121 +1,113 @@
-import { useEffect, useState } from "react";
-import msweep from "../../assets/imgs/msweep-lg.png";
-import devhub from "../../assets/imgs/devhub-lg.png";
-import concertFinder from "../../assets/imgs/concert-finder-lg.png";
-import jacobShootsPreview from "../../assets/imgs/jacobshootspreview.png";
-import chromeSS from "../../assets/imgs/chrome-ss-1.png";
+import kits from "../../assets/imgs/kits-clip.webp";
+import kitsStill from "../../assets/imgs/kits-clip-still.webp";
+import searchbarStudio from "../../assets/imgs/searchbarstudio.webp";
+import jacobShoots from "../../assets/imgs/jacobshoots.webp";
+import videoResizer from "../../assets/imgs/video-resizer.webp";
+import minesweeper from "../../assets/imgs/minesweeper.webp";
 
-export const Projects = () => {
-    const [className, setClassName] = useState("panel active inactive pt-4");
+type Project = {
+    title: string;
+    img: string;
+    imgStill?: string;
+    imgAlt: string;
+    caption?: string;
+    body: string;
+    tech: string[];
+    url: string;
+    urlLabel: string;
+    github?: string;
+};
 
-    useEffect(() => {
-        setTimeout(() => setClassName("panel active pt-4"), 250);
-    }, []);
+const PROJECTS: Project[] = [
+    {
+        title: "Kyle in the Shower",
+        img: kits,
+        imgStill: kitsStill,
+        imgAlt: "Stream overlay showing a break slide and its winner announcement",
+        caption: "On-stream overlay announcing a break winner.",
+        body: "Online store and live-stream toolkit for a trading card rip-and-ship business. A custom React app on top of WordPress and WooCommerce gives the streamer a live dashboard for running breaks and orders, with a REST API that also feeds real-time OBS overlays for sales, chase pulls and break results.",
+        tech: ["React", "WordPress", "WooCommerce", "PHP", "REST API", "OBS"],
+        url: "https://kyleintheshower.com",
+        urlLabel: "Visit Site",
+    },
+    {
+        title: "SearchbarStudio",
+        img: searchbarStudio,
+        imgAlt: "SearchbarStudio homepage",
+        body: "Marketing site and client portal for a web design studio. Public pages up front, with client logins, invoices and subscription billing behind them, plus an admin back office for running projects.",
+        tech: ["Next.js", "TypeScript", "Tailwind", "Postgres", "Drizzle", "Better Auth", "Stripe"],
+        url: "https://searchbarstudio.com",
+        urlLabel: "Visit Site",
+        github: "https://github.com/Firecoded/searchbarstudio",
+    },
+    {
+        title: "jacobshoots.pictures",
+        img: jacobShoots,
+        imgAlt: "jacobshoots.pictures photo gallery",
+        body: "A minimalist gallery to share travel photography. I built it from scratch rather than using a pre-made service to keep full control over the design, performance and cost.",
+        tech: ["React", "TypeScript", "Vite", "Cloudflare R2", "Workers", "D1"],
+        url: "https://jacobshoots.pictures",
+        urlLabel: "Visit Site",
+        github: "https://github.com/Firecoded/jtphotography",
+    },
+    {
+        title: "Draggable Video Resizer",
+        img: videoResizer,
+        imgAlt: "Draggable Video Resizer extension popup",
+        body: "Chrome extension that wraps video elements in a draggable container, preserves page flow with placeholders and enables custom video resizing. Built with event-driven content scripts and opt-in DOM manipulation.",
+        tech: ["JavaScript", "Chrome Extension APIs", "Vite"],
+        url: "https://chromewebstore.google.com/detail/draggable-video-resizer/elfibhkehlekegpggjaanbbjnnnnbdni",
+        urlLabel: "Chrome Web Store",
+        github: "https://github.com/Firecoded/draggable-video-resizer",
+    },
+    {
+        title: "MinesweeperJS",
+        img: minesweeper,
+        imgAlt: "Minesweeper game board",
+        body: "Minesweeper built with ReactJS. A fun challenge in applying game logic, state updates, and UI feedback in a framework more commonly used for interfaces than games.",
+        tech: ["React", "SCSS"],
+        url: "https://hardcore-saha-279f59.netlify.app/",
+        urlLabel: "Play",
+        github: "https://github.com/Firecoded/msweep",
+    },
+];
 
-    const projectCards = [
-        {
-            imgSrc: devhub,
-            imgAlt: "DevHub app image",
-            cardTitle: "DevHub",
-            cardBody:
-                "Developer-centric social app built with MongoDB, Express, React, and Node. Secure JWT auth, RESTful APIs, and responsive UI with theme toggle. Hosted on Vercel and Render (initial load may take ~30 seconds as the free-tier server spins up).",
-            techUsed: "ReactJS, Redux, SCSS, MaterializeCSS, Node, Express, MongoDB, JWT",
-            github: "https://github.com/Firecoded/dev_connect",
-            liveDemo: "https://dev-hub-plum.vercel.app",
-            demoIsActive: true,
-        },
-        {
-            imgSrc: jacobShootsPreview,
-            imgAlt: "Photo gallery preview",
-            cardTitle: "jacobshoots.pictures",
-            cardBody:
-                "A minimalist gallery to share travel photography. I built it from scratch rather than using a pre-made service to keep full control over the design, performance and cost.",
-            techUsed: "ReactJS, Typescript, Bootstrap 5",
-            github: "https://github.com/Firecoded/jtphotography",
-            liveDemo: "https://jacobshoots.pictures",
-            demoIsActive: true,
-        },
-        {
-            imgSrc: chromeSS,
-            imgAlt: "Chrome extension preview",
-            cardTitle: "Draggable Video Resizer",
-            cardBody:
-                "Chrome extension that wraps video elements in a draggable container, preserves page flow with placeholders and enables custom video resizing. Built with event-driven content scripts and opt-in DOM manipulation.",
-            techUsed: "JavaScript, HTML, CSS, Chrome Extension APIs, Vite",
-            github: "https://github.com/Firecoded/draggable-video-resizer",
-            liveDemo:
-                "https://chromewebstore.google.com/detail/draggable-video-resizer/elfibhkehlekegpggjaanbbjnnnnbdni?authuser=2&hl=en",
-            demoIsActive: true,
-        },
-        {
-            imgSrc: msweep,
-            imgAlt: "Minesweeper game image",
-            cardTitle: "MinesweeperJS",
-            cardBody:
-                "Minesweeper built with ReactJS. A fun challenge in applying game logic, state updates, and UI feedback in a framework more commonly used for interfaces than games.",
-            techUsed: "ReactJS, SCSS",
-            github: "https://github.com/Firecoded/msweep",
-            liveDemo: "https://hardcore-saha-279f59.netlify.app/",
-            demoIsActive: true,
-        },
-        {
-            imgSrc: concertFinder,
-            imgAlt: "Concert finder app image",
-            cardTitle: "Concert Finder",
-            cardBody:
-                "Hackathon project built with jQuery that makes use of TicketMaster and Google APIs. Hackathons are great ways to learn valuable teamwork skills and learn to deliver solutions quickly under pressure.",
-            techUsed: "jQuery, JSDoc, AJAX, MaterializeCSS, HTML, CSS",
-            github: "https://github.com/Firecoded/ConcertFinder",
-            liveDemo: "https://concert-finder.netlify.app",
-            demoIsActive: true,
-        },
-    ];
-
-    const buildProjectCards = () =>
-        projectCards.map((c, i) => (
-            <div className="col-sm-12 col-md-6 col-lg-4 d-flex" key={i}>
-                <div className="card shadow-sm rounded h-100 w-100">
-                    <img src={c.imgSrc} className="card-img-top" alt={c.imgAlt} />
-                    <div className="card-body d-flex flex-column">
-                        <h5 className="card-title font-weight-bold mb-2" style={{ fontSize: "1.8rem" }}>
-                            {c.cardTitle}
-                        </h5>
-                        <p className="card-text mb-2" style={{ fontSize: "16px" }}>
-                            {c.cardBody}
-                        </p>
-                        <p className="mb-3 text-muted" style={{ fontSize: "14px" }}>
-                            <strong>Tech Used:</strong> {c.techUsed}
-                        </p>
-                        <div className="mt-auto d-flex justify-content-end">
-                            <a
-                                href={c.github}
-                                className="btn btn-sm btn-outline-indigo mr-2"
-                                target="_blank"
-                                rel="noreferrer"
-                            >
-                                GitHub
-                            </a>
-                            {c.demoIsActive ? (
-                                <a href={c.liveDemo} className="btn btn-sm btn-ocean" target="_blank" rel="noreferrer">
-                                    Live Demo
+export const Projects = () => (
+    <article id="work" className="panel">
+        <header>
+            <h2>Code Projects</h2>
+        </header>
+        <div className="project-grid">
+            {PROJECTS.map((p, i) => (
+                <div className="project-card" key={p.title}>
+                    <a href={p.url} className="project-img" target="_blank" rel="noreferrer" tabIndex={-1}>
+                        <picture>
+                            {p.imgStill && <source media="(prefers-reduced-motion: reduce)" srcSet={p.imgStill} />}
+                            <img src={p.img} alt={p.imgAlt} loading={i < 3 ? "eager" : "lazy"} />
+                        </picture>
+                    </a>
+                    {p.caption && <p className="project-caption">{p.caption}</p>}
+                    <div className="project-body">
+                        <h3>{p.title}</h3>
+                        <p>{p.body}</p>
+                        <ul className="tags">
+                            {p.tech.map((t) => (
+                                <li key={t}>{t}</li>
+                            ))}
+                        </ul>
+                        <div className="project-links">
+                            {p.github && (
+                                <a href={p.github} className="btn btn-outline" target="_blank" rel="noreferrer">
+                                    <i className="fab fa-github" aria-hidden="true"></i> GitHub
                                 </a>
-                            ) : (
-                                <span className="badge badge-secondary align-middle">Demo Unavailable</span>
                             )}
+                            <a href={p.url} className="btn" target="_blank" rel="noreferrer">
+                                {p.urlLabel}
+                            </a>
                         </div>
                     </div>
                 </div>
-            </div>
-        ));
-
-    return (
-        <article id="work" className={className}>
-            <header>
-                <h2 className="mb-4">Code Projects</h2>
-            </header>
-            <section>
-                <div className="row">{buildProjectCards()}</div>
-            </section>
-        </article>
-    );
-};
+            ))}
+        </div>
+    </article>
+);
