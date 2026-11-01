@@ -2,7 +2,7 @@ import kits from "../../assets/imgs/kits-clip.webp";
 import kitsStill from "../../assets/imgs/kits-clip-still.webp";
 import searchbarStudio from "../../assets/imgs/searchbarstudio.webp";
 import jacobShoots from "../../assets/imgs/jacobshoots.webp";
-import videoResizer from "../../assets/imgs/video-resizer.webp";
+import videoPopOut from "../../assets/imgs/video-pop-out.webp";
 import minesweeper from "../../assets/imgs/minesweeper.webp";
 
 type Project = {
@@ -51,12 +51,12 @@ const PROJECTS: Project[] = [
         github: "https://github.com/Firecoded/jtphotography",
     },
     {
-        title: "Draggable Video Resizer",
-        img: videoResizer,
-        imgAlt: "Draggable Video Resizer extension popup",
+        title: "Draggable Video Pop Out",
+        img: videoPopOut,
+        imgAlt: "Video floating in the corner of an article while scrolling",
         body: "Chrome extension that wraps video elements in a draggable container, preserves page flow with placeholders and enables custom video resizing. Built with event-driven content scripts and opt-in DOM manipulation.",
         tech: ["JavaScript", "Chrome Extension APIs", "Vite"],
-        url: "https://chromewebstore.google.com/detail/draggable-video-resizer/elfibhkehlekegpggjaanbbjnnnnbdni",
+        url: "https://chromewebstore.google.com/detail/draggable-video-pop-out-f/elfibhkehlekegpggjaanbbjnnnnbdni",
         urlLabel: "Chrome Web Store",
         github: "https://github.com/Firecoded/draggable-video-resizer",
     },
